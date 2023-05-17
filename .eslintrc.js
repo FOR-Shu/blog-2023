@@ -13,7 +13,8 @@ module.exports = {
         'plugin:vue/vue3-recommended',
         'plugin:@typescript-eslint/recommended',
         'prettier',
-        'plugin:prettier/recommended'
+        'plugin:prettier/recommended',
+        '@unocss'
     ],
     plugins: ['prettier'],
     rules: {
