@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    font-family: Inter, ui-sans-serif, Segoe UI, Roboto, Helvetica Neue, Arial,
+        Noto Sans, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        Segoe UI Symbol, 'Noto Color Emoji';
+    --header-height: 64px;
+    --footer-height: 82px;
+
+    /* 覆蓋 docus 內建最大寬度變數 */
+    --elements-container-maxWidth: 100vw;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+blockquote {
+    position: relative;
+}
+
+blockquote::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    background-color: grey;
+    height: 100%;
+    width: 5px;
+}
+
+@media (min-width: 1024px) {
+    .docs-toc-wrapper {
+        padding-bottom: 24px;
+    }
+}
+
+.docs-toc-wrapper {
+    position: relative;
+}
+
+.docs-toc-wrapper:before {
+    width: 1px;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -0.875rem;
+    transform: translateY(-50%);
+    background-color: rgb(51, 51, 51, 0.2);
+}
+
+:root[data-theme='dark'] .docs-toc-wrapper:before {
+    background-color: rgba(255, 255, 255, 0.5);
+}
